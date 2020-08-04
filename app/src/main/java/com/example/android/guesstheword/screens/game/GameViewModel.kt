@@ -4,9 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 class GameViewModel : ViewModel() {
-    // The current word
-    val word = MutableLiveData<String>()
-
+    // The current score
+    private val _score = MutableLiveData<Int>()
+    val score: LiveData<Int>
+        get() = _score
     private val _word = MutableLiveData<String>()
     val word: LiveData<String>
         get() = _word
